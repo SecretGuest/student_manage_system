@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>注册</h1>
+
+<form action="" method="post">
+    {% for res in refm %}
+        <p>{{ res.label }}{{ res }}{{ res.errors.0 }}</p>
+    {% endfor %}
+    <p><input type="submit" value="注册"></p>
+
+</form>
+</body>
+</html>

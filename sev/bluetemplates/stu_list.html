@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>学员全部信息</h1>
+<a href="/add_stu">添加数据</a>
+<table border="1px">
+    <tr>
+        <td>id</td>
+        <td>name</td>
+        <td>age</td>
+        <td>删除</td>
+        <td>修改</td>
+        <td>查看</td>
+    </tr>
+    {% for stu in ret %}
+        <tr>
+            <td>{{ stu['id'] }}</td>
+            <td>{{ stu['name'] }}</td>
+            <td>{{ stu['age'] }}</td>
+            <a href=""></a>
+            <td><a href="/del_stu?id={{ stu['id'] }}">删除</a></td>
+            <td><a href="/update_stu?id={{ stu['id'] }}">修改</a></td>
+            <td><a href="/list1_stu/{{ stu['id'] }}">查看</a></td>
+        </tr>
+    {% endfor %}
+
+
+</table>
+
+</body>
+</html>
